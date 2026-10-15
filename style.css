@@ -9,12 +9,13 @@
 /*Navigation bar*/
 .navbar {
   overflow: hidden;
-  background-color: black;
+  background-color: light-grey;
 }
 .navbar a {
   float: center; 
   display: block; 
-  color: white; 
+  color: white;
+  font-family: sans-serif;
   text-align: center;
   padding: 14px 20px;
 }
