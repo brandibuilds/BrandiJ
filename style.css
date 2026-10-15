@@ -1,6 +1,24 @@
+/*Page Headers*/
 .header {
   padding: 80px;
   text-align: center;
   background: black;
   color: white;
+}
+
+/*Navigation bar*/
+.navbar {
+  overflow: hidden;
+  background-color: black;
+}
+.navbar a {
+  float: center; 
+  display: block; 
+  color: white; 
+  text-align: center;
+  padding: 14px 20px;
+}
+.navbar a:hover {
+  background-color: grey; 
+  color: black;
 }
