@@ -1,6 +1,6 @@
 /*Page Headers*/
 .header {
-  padding: 80px;
+  padding: 50px;
   text-align: center;
   background: black;
   color: white;
@@ -9,7 +9,8 @@
 /*Navigation bar*/
 .navbar {
   overflow: hidden;
-  background-color: light-grey;
+  border:2px light-grey;
+  border-radius: 5px;
 }
 .navbar a {
   float: center; 
