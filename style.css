@@ -31,3 +31,22 @@
   font-family: sans-serif:
 }
 
+/*Flex Box*/
+.container {
+  display: flex; 
+  flex-direction: row;
+  background-color: DarkGray; 
+}
+
+.container 2 {
+  background-color: LightGray;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 26px; 
+}
+
+  
+  
+
