@@ -27,10 +27,10 @@
       <li><p><b>Time Limit;</b> You will have 10 minutes to complete the quiz.</p></li>
       <li><p><b>Question Types;</b> The quiz includes multiple-choice, fill-in-the-blank, and multiple select questions.</p></li>
       <li><p><b>Score;</b> Your score will be displayed at the end of the quiz so you can see how well you performed.</p></li>
-   <!-- Question1 -->
+   <form id="quizForm">
+      <!-- Question1 -->
     <div class="container2">
         <p> The first web server and web browser became avaliable in what year?</p>
-        <form>
           <input type="radio" id="a" name="year" value="1860">
           <label for="a">1860</label><br>
           <input type="radio" id="b" name="year" value="1990">
@@ -76,14 +76,40 @@
       <div class="container2">
         <p>Which statement is true regarding Microsoft IIS (Internet Information Services).</p><br>
         <p>Select all that apply</p>
-          <input type="checkbox" id="proprietary" name="proprietary" value="isproprietary">
+          <input type="checkbox" id="proprietary" name="microsoftiis" value="isproprietary">
           <label for="proprietary">Microsoft IIS is proprietary to Microsoft.</label><br>
-          <input type="checkbox" id="1995" name="1995" value="1995true">
+          <input type="checkbox" id="1995" name="microsoftiis" value="1995true">
           <label for="1995">Microsoft IIS was developed in 1995.</label><br>
-          <input type="checkbox" id="NeXT" name="NeXT" value="NeXTfalse">
+          <input type="checkbox" id="NeXT" name="microsoftiis" value="NeXTfalse">
           <label for="NeXT">Microsoft IIS uses the NeXT platform.</label><br>
-          <input type="checkbox" id="security" name="security" value="securitytrue">
+          <input type="checkbox" id="security" name="microsoftiis" value="securitytrue">
           <label for="security">Microsoft IIS included built-in security.</label><br>
       </div>
-      </form>
-  </body> 
+      <button type="submit">Submit Quiz</button>
+   </form>
+      <!-- Score -->
+      <p id="results">Score</p>
+      <!-- java -->
+      <script>
+        document.getElementById("quizForm").addEventListener("submit",function(event) {
+                                                             event.preventDefault();
+          let score =0;
+          let year =document.querySelector('input[name="year"]:checked');
+          let software=document.querySelector('input[name="software"]:checked');
+          let discovery=document.querySelector('input[name="discovery"]:checked');
+          let answer=document.getElementById("ws").value.trim().toLowerCase();
+          let answer=document.getElementById("ed").value.trim().toLowerCase();
+          let microsoftiisAnswers =Array.form(document.querySelectorAll('input[name="microsoftiis"]:checked')).map(input => input.value);
+
+          if (year && year.value==="1990"){score++;}
+          if (software && software.value==="Open Source Software"){score++;}
+          if (discovery && discovery.value==="TBL"){score++;}
+          if (answer==="web server"){score++;}
+          if (answer==="event driven"){score++;)
+          let correctmicrosoftiis = ["isproprietary","1995true","securitytrue"];
+                                       if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++;}
+  
+          document.getElementById("result").textContent = "Your Score:"+score+"out of 6("+Math.round((score/6)*100)+"%";});
+      </script>
+  </body>
+</html>
