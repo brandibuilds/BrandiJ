@@ -96,7 +96,20 @@
    <script>
    document.getElementById("quizForm").addEventListener("submit",function(event){
      event.preventDefault();
-     alert("working");
+     let score=0;
+     let year= document.querySelector('input[name="year"]:checked');
+     let software= document.querySelector('input[name="software"]:checked');
+     let discovery= document.querySelector('input[name="discovery"]:checked');
+
+     if (year && year.value==="1990"){score++;}
+     if (software && software.value==="line-mode"){score++;}
+     if (discovery && discovery.value==="TBL"){score++;}
+
+     let percentage = Math.round((score / 3 ) * 100; 
+
+       document.getElementById("results").textContent =  
+
+         "Score: " +score+ "out of 3 (" + percentage + "%)";    
    });                                                    
    </script>
 </body>
