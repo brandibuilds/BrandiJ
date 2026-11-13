@@ -111,7 +111,9 @@
      if (answer2==="event driven"){score++;}
      let correctmicrosoftiis = ["isproprietary","1995true","securitytrue"];
      if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++}
-   document.getElementById("results").textContent = "Score":"+score+"out of 6("+Math.round((score/6)*100)+"%";
+     let percentage = Math.round((score / 6 ) * 100;
+     document.getElementById("results").textContent = 
+       "Score: " +score+ "out of 6 (" + percentage + "%)";
    });                                                    
    </script>
 </body>
