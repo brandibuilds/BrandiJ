@@ -94,7 +94,9 @@
       <button type="submit">Submit Quiz</button>
    </form>
    <script>
-   alert("its working");
+   document.getElementById("quizForm").addEventListener("submit",function(event){event.preventDefault();
+                                                                                 alert("works");
+                                                                                });
    </script>
 </body>
 </html>
