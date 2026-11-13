@@ -93,26 +93,8 @@
       </div>
       <button type="submit">Submit Quiz</button>
    </form>
-   <p id="results">Score</p>
    <script>
-        document.getElementById("quizForm").addEventListener("submit",function(event){event.preventDefault();alert("it's working");});
-          let score =0;
-          let year =document.querySelector('input[name="year"]:checked');
-          let software=document.querySelector('input[name="software"]:checked');
-          let discovery=document.querySelector('input[name="discovery"]:checked');
-          let answer1=document.getElementById("ws").value.trim().toLowerCase();
-          let answer2=document.getElementById("ed").value.trim().toLowerCase();
-          let microsoftiisAnswers =Array.form(document.querySelectorAll('input[name="microsoftiis"]:checked')).map(input => input.value);
-
-          if (year && year.value==="1990"){score++;}
-          if (software && software.value==="Open Source Software"){score++;}
-          if (discovery && discovery.value==="TBL"){score++;}
-          if (answer1==="web server"){score++;}
-          if (answer2==="event driven"){score++;)
-          let correctmicrosoftiis = ["isproprietary","1995true","securitytrue"];
-                                       if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++;}
-  
-          document.getElementById("result").textContent = "Your Score:"+score+"out of 6("+Math.round((score/6)*100)+"%";});
- </script>
+   alert("its working");
+   </script>
 </body>
 </html>
