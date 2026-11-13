@@ -94,9 +94,9 @@
       <button type="submit">Submit Quiz</button>
    </form>
       <!-- Score -->
-      <p id="results">Score</p>
+    <p id="results">Score</p>
       <!-- java -->
-      <script>
+    <script>
         document.getElementById("quizForm").addEventListener("submit",function(event){event.preventDefault();alert("it's working");});
           let score =0;
           let year =document.querySelector('input[name="year"]:checked');
@@ -115,6 +115,6 @@
                                        if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++;}
   
           document.getElementById("result").textContent = "Your Score:"+score+"out of 6("+Math.round((score/6)*100)+"%";});
-      </script>
-  </body>
+</script>
+</body>
 </html>
