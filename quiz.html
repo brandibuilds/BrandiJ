@@ -94,7 +94,8 @@
       <button type="submit">Submit Quiz</button>
    </form>
    <script>
-   document.getElementById("quizForm").addEventListener("submit",click){
+   document.getElementById("quizForm").addEventListener("submit",function(event){
+     event.preventDefault();
        let score=0;
        let year= document.querySelector('input[name="year"]:checked');
        let software= document.querySelector('input[name="software"]:checked');
