@@ -51,5 +51,19 @@
   text-align: center;
   font-family: Arial;
 }
-  
+/*Quiz Flex Box*/
+.container2 {
+  display: flex; 
+  flex-direction: column;
+  background-color: DarkGray; 
+}
+
+.container2 div {
+  background-color: LightGray;
+  width: 800px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px; 
+}
 
