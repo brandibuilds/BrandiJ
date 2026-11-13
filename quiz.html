@@ -92,20 +92,20 @@
       <!-- java -->
       <script>
         document.getElementById("quizForm").addEventListener("submit",function(event) {
-                                                             event.preventDefault();
+        event.preventDefault();
           let score =0;
           let year =document.querySelector('input[name="year"]:checked');
           let software=document.querySelector('input[name="software"]:checked');
           let discovery=document.querySelector('input[name="discovery"]:checked');
-          let answer=document.getElementById("ws").value.trim().toLowerCase();
-          let answer=document.getElementById("ed").value.trim().toLowerCase();
+          let answer1=document.getElementById("ws").value.trim().toLowerCase();
+          let answer2=document.getElementById("ed").value.trim().toLowerCase();
           let microsoftiisAnswers =Array.form(document.querySelectorAll('input[name="microsoftiis"]:checked')).map(input => input.value);
 
           if (year && year.value==="1990"){score++;}
           if (software && software.value==="Open Source Software"){score++;}
           if (discovery && discovery.value==="TBL"){score++;}
-          if (answer==="web server"){score++;}
-          if (answer==="event driven"){score++;)
+          if (answer1==="web server"){score++;}
+          if (answer2==="event driven"){score++;)
           let correctmicrosoftiis = ["isproprietary","1995true","securitytrue"];
                                        if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++;}
   
