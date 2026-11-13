@@ -27,7 +27,7 @@
       <li><p><b>Time Limit;</b> You will have 10 minutes to complete the quiz.</p></li>
       <li><p><b>Question Types;</b> The quiz includes multiple-choice, fill-in-the-blank, and multiple select questions.</p></li>
       <li><p><b>Score;</b> Your score will be displayed at the end of the quiz so you can see how well you performed.</p></li>
-   <form id="quizForm">
+  <form id="quizForm">
       <!-- Question1 -->
     <div class="container2">
       <div class="p">
@@ -93,10 +93,8 @@
       </div>
       <button type="submit">Submit Quiz</button>
    </form>
-      <!-- Score -->
-    <p id="results">Score</p>
-      <!-- java -->
-    <script>
+   <p id="results">Score</p>
+   <script>
         document.getElementById("quizForm").addEventListener("submit",function(event){event.preventDefault();alert("it's working");});
           let score =0;
           let year =document.querySelector('input[name="year"]:checked');
@@ -115,6 +113,6 @@
                                        if (microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++;}
   
           document.getElementById("result").textContent = "Your Score:"+score+"out of 6("+Math.round((score/6)*100)+"%";});
-</script>
+ </script>
 </body>
 </html>
