@@ -59,13 +59,13 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   background-color: DarkGray;
   color: Black;
   font-family: arial;
 }
 
-buttons {
+.buttons {
   cursor: pointer;
 }
 
