@@ -136,11 +136,10 @@
 .answer-button {
   background-color: LightGray;
   color: Black;
-  width: 100%;
+  width: 60%;
   padding: 1.2rem;
   border: 2px solid black;
   border-radius: 8px;
-  overflow: hidden;
   text-aling: left; 
   font-size: 16px;
   font-weight: 600; 
