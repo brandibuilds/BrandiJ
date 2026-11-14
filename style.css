@@ -150,7 +150,7 @@
   margin-top: 1rem;
 }
 
-.next-button {
+.submit-button {
   background-color: Lightgray;
   color: Black;
   width: 100%;
@@ -161,7 +161,7 @@
   font-weight: 700;
   transition: all .1 ease-in;
 }
-.next-button:hover {
+.submit-button:hover {
   background-color: Green;
 }
 
