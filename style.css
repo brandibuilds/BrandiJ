@@ -140,6 +140,7 @@
   padding: 1.2rem;
   border: 2px solid black;
   border-radius: 8px;
+  overflow: hidden;
   text-aling: left; 
   font-size: 16px;
   font-weight: 600; 
@@ -168,7 +169,7 @@
   transition: all .1 ease-in;
 }
 .next-button:hover {
-  background-color: LightBlue;
+  background-color: Green;
 }
 
 
