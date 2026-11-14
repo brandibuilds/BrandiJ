@@ -23,6 +23,11 @@ function calculate()
   if(microsoftiis.length===correctmicrosoftiis.length && correctmicrosoftiis.every(answer => microsoftiis.includes(answer))){score++};
   if(answer3==="url"){score++};
   if(browser && browser.value==="url"){score++};
-  if(
+  if(arch && arch.value==="process based"){score++};
+  if(answer4==="w3c"){score++};
+
+  let percentage = Math.round(score/6) * 100;
+  "Score:" + score; 
+}
   
   
