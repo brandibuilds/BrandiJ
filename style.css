@@ -52,7 +52,8 @@
   font-family: Arial;
 }
 /*Global Styles*/
-* {
+
+/* * {
   margin: 0;
   padding: 0; 
   box-sizing: border-box;
@@ -67,7 +68,7 @@ body {
 buttons {
   cursor: pointer;
 }
-
+*/
 /* Quiz Section */
 .quiz-section {
   min-height: 100vh;
