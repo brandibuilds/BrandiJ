@@ -123,6 +123,7 @@ buttons {
   font-size: 25px;
   line-height: 1.4;
 }
+
 .answer-buttons-container {
   display: flex;
   flex-direction: column;
