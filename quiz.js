@@ -1,4 +1,4 @@
-document.getElementById("wsquiz").addEventListener("submit",calculate)
+document.getElementById("wsquiz").addEventListener("submit",calculate);
 
 function calculate(event)
   event.preventDefault()
