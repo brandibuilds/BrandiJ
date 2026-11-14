@@ -23,26 +23,10 @@
   </head>
   <body>
     <script>
-      const display = document.getElementById('left-timer-box');
-      let timeRemaining = 600; 
-      function updateCountdown() {
-        // Convert mintues into seconds//
-        const minutes =Math.floor(timeRemaining / 60);
-        const second = timeRemaining % 60;
-        //Leading Zero for readability/
-        const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-        // Display//
-        display.textContent = `${minutes}:${formattedSeconds}`;
-        //Stops Timer @ 0//
-        if (timeRemaining <= 0) {
-          clearInterval(timeInterval);
-          display.textContent = "Time's Up";
-        } else {
-          timeRemaining--;
-        }
+      setTimeout(showMessgae,2000,"Time's Up");
+      function showMessage(time, message) {
+        myDisplayer(time + " " + message);
       }
-      updateCountdown();
-      const timerInterval = setInterval(updateCountdown, 1000);
     </script>
     <h2 id="h2"> Knowledge Check </h2>
     <div class="p">
