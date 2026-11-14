@@ -133,10 +133,8 @@
    </form>
    <p id="score"></p>
    <script>
-   document.getElementById("wsquiz").addEventListener("submit",function(event){
-     event.preventDefault();
-     alert("this is stupid");
-   });                                                    
+   document.getElementById("score").textContent = "Score:" + score;
+   }                                                    
    </script>
 </body>
 </html>
