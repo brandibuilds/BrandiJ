@@ -1,3 +1,3 @@
-alert("JS Connected)
+alert("JS Connected")
   
   
