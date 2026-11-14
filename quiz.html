@@ -27,7 +27,7 @@
       <li><p><b>Time Limit;</b> You will have 10 minutes to complete the quiz.</p></li>
       <li><p><b>Question Types;</b> The quiz includes multiple-choice, fill-in-the-blank, and multiple select questions.</p></li>
       <li><p><b>Score;</b> Your score will be displayed at the end of the quiz so you can see how well you performed.</p></li>
-  <form id="quizForm">
+  <form id="wsquiz">
       <!-- Question1 -->
     <div class="container2">
       <div class="p">
@@ -130,8 +130,9 @@
     <!-- Submit Button -->
     <button type="submit">Submit Quiz</button>
    </form>
+   <p id="score"></p>
    <script>
-   document.getElementById("quizForm").addEventListener("submit",function(event){
+   document.getElementById("wsquiz").addEventListener("submit",function(event){
      event.preventDefault();
      alert("this is stupid");
    });                                                    
