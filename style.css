@@ -97,6 +97,7 @@
 .quiz-title-container {
   background-color: LightGray;
   display: inline-block;
+  margin-top: 1rem;
   padding:.8rem 2rem;
   border-radius: 10px;
 }
