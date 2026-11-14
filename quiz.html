@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <script src="quiz.js"></script>
     <!-- Title -->
     <div class="header">
       <h1> Web Server Quiz</h1>
@@ -21,13 +20,38 @@
     <p><a href="about.html">About Me</a></p>
     <p><a href="quiz.html">Quiz</a></p>
   </div>
+  <h2 id="h2"> Knowledge Check </h2>  
   </head>
-  <body>
-    <h2 id="h2"> Knowledge Check </h2>
-    <div class="p">
-      <li><p><b>Time Limit;</b> You will have 10 minutes to complete the quiz.</p></li>
-      <li><p><b>Question Types;</b> The quiz includes multiple-choice, fill-in-the-blank, and multiple select questions.</p></li>
-      <li><p><b>Score;</b> Your score will be displayed at the end of the quiz so you can see how well you performed.</p></li>
-  <form id="wsquiz">
-      <!-- Question1 -->
-   
+<body>
+  <main class="quiz-section"></main>
+    <div class="quiz-container">
+      <!--Timer -->
+      <div class="quiz-timer">
+      </div>
+      <!-- Quiz Header -->
+      <div class="quiz-header">
+        <div class="quiz-title-contianer">
+          <h1 class="quiz-title">Web Server Quiz</h1>
+        </div>
+        <p class="question-count" id="question-count">Question 1 of 10</p>
+      </div>
+      <!-- Questions-->
+      <div class="question-container">
+        <h2 class="question" id="question">The first web server and browser became available in what year?</h2>
+      </div
+      <!-- Answers -->
+       <div class="answer-buttons-container" id="answer-button">
+         <button class="answer-buttom" type="button">1860</button>
+         <button class="answer-buttom" type="button">1990</button>
+         <button class="answer-buttom" type="button">2000</button>
+         <button class="answer-buttom" type="button">1999</button>       
+       </div>
+      <!-- Quiz Controls -->
+      <div class="quiz-controls">
+        <button class="next-button" id="next-button" type="button"> Next Question</button>
+      </div>
+    </div>
+  </main>
+  <script src="quiz.js"></script>
+</body>
+</html>
