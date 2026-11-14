@@ -60,7 +60,7 @@
 }
 
 .body {
-  background-color: DarkGray;
+  background-color: Ice Blue;
   color: Black;
   font-family: arial;
 }
@@ -127,11 +127,11 @@
 }
 
 .answer-button {
-  background-color: LightGray;
+  background-color: White;
   color: Black;
   width: 30%;
   padding: 1.2rem;
-  border: 2px solid black;
+  border: 2px Blue;
   border-radius: 8px;
   text-align: center; 
   font-size: 16px;
