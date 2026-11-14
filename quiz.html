@@ -22,9 +22,9 @@
   </div>
   </head>
   <body>
-  <div class="container4timer"></div>
+  <div class="container4timer">
     <script>
-      const display = document.querySelector(".container4timer");
+      const display = document.querySelector(".container2");
       let timeRemaining = 600; 
       function updateCountdown() {
         // Convert mintues into seconds//
@@ -45,7 +45,7 @@
       updateCountdown();
       const timerInterval = setInterval(updateCountdown, 1000);
     </script>
-  
+  </div>
     <h2 id="h2"> Knowledge Check </h2>
     <div class="p">
       <li><p><b>Time Limit;</b> You will have 10 minutes to complete the quiz.</p></li>
