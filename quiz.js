@@ -11,14 +11,17 @@ const resultDisplay = document.getElementById("results");
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();
 
+  const formData = new FormData(quizForm):
   let score = 0;
   const totalQuestions= Object.keys(correctAnswers).length;
 
   for(let question in correctAnswers) {
-    const selectedOption = document.querySelector('input[name="${question}"]:checked');
+    const textInput = document.querySelector(`input[name="${question}"][type="text"]`);
+    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
 
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++};
-  }
+    } else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score ++;}
+}
 
   const percentage = Math.round((score / 3) * 100);
   resultDisplay.innerText= 'Score: ' + score
