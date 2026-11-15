@@ -40,7 +40,18 @@ quizForm.addEventListener("submit", function(event) {
   resultDisplay.innerText= `Score: ${score}/${totalQuestions}(${percentage}%)`;
 }); 
       
-
+let mins = 10;
+let secs =00;
+function updateTimer(){
+  const timer= document.getElementById('timer');
+  const mins= String(Math.floor(seconds / 60)).padStart(2,'0');
+  const secs= String(Math.floor(seconds % 60).padStart(2,'0');
+  timer.textContent=`${mins} : ${secs}`;
+  if(seconds > 0)seconds-;
+}
+updateTimer();
+setInterval(updateTimer, 600000);
+  
   
 
   
