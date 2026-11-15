@@ -23,7 +23,7 @@ quizForm.addEventListener("submit", function(event) {
     if (userAnswer) {
       const cleanedAnswer = userAnswer.trim().toLowerCase();
 
-      if (correctAnswer[question].includes(cleanedAnswer)) {score++;}
+      if (correctAnswers[question].includes(cleanedAnswer)) {score++;}
     }
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
