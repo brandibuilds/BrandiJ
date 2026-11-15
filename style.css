@@ -59,14 +59,16 @@
   border: 1px solid black;
 }
 
+
+/*Quiz Page*/
+.quiz-container {
+  margin: 0;
+  padding: 0;
+  background-color:Ice Blue;
+
 .question {
-  background-color: White;
-  max-width:500px;
-  width: 100%;
-  padding: 1.5rem 2.5rem 2.5rem;
-  border-radius: 18px;
-  text-align: center;
-  align-items: center; 
+  background-color:White;
+  box-sizing: border-box;
 }
 
 
