@@ -11,7 +11,7 @@ const resultDisplay = document.getElementById("results");
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const formData = new FormData(quizForm):
+  const formData = new FormData(quizForm);
   let score = 0;
   const totalQuestions= Object.keys(correctAnswers).length;
 
