@@ -113,7 +113,40 @@
 
 /*results box*/
 
-  
+#quizResults {
+  background-color: #f4f7fb;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+#score {
+  color: #1e40af;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+.incorrect {
+  color: red; 
+  font-weight: bold;
+}
+
+#timeSpent { 
+  color: blue;
+  font-weight: bold;
+}
+#resetQuiz {
+  background-color: cobalt;
+  color:white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
   
 
   
