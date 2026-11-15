@@ -9,7 +9,7 @@ const correctAnswers = {
   question7: "w3c",
   question8: "processing",
   question9: "url",
-  question10: "proprietary","1995","security"
+  question10: ["proprietary","1995","security"]
 };
 
 const quizForm = document.getElementById("quizForm");
