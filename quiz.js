@@ -28,7 +28,6 @@ quizForm.addEventListener("submit", function(event) {
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
 }
-
   const percentage = Math.round((score / 3) * 100);
   resultDisplay.innerText= `Score: ${score}/(${percentage}%)`;
 }); 
