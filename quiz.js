@@ -61,15 +61,7 @@ function updateTimer(){
 updateTimer();
 const countdown = setInterval(updateTimer, 1000);
 
-//timer should stop when submit is clikced//
-let startTime = Date.now();
-clearInterval(timer);
-let endTime= Date.now();
-let timeSpent = Math.floor((endTime - startTime) / 1000);
-let minutes = Math.floor(timeSpent / 60);
-let seconds = timeSpent % 60;
 
-document.getElementById("timeSpent").textContent = "Time Spent: " + minutes + "minutes and" + seconds + "seconds";
   
   
 
