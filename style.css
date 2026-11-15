@@ -54,7 +54,7 @@
 
 /*Key Concepts Style*/
 
-#key-concepts container, #tr , #td {
+#table-container, #tr , #td {
   width: 100%;
   border: 1px solid black;
 }
