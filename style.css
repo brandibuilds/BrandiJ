@@ -52,6 +52,13 @@
   font-family: Arial;
 }
 
+/*Key Concepts Style*/
+
+#key-concepts container {
+  width: 100%;
+  border: 1px solid black;
+}
+
 .question {
   background-color: White;
   max-width:500px;
