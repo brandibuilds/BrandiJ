@@ -92,8 +92,23 @@
   margin-top: 0;
 }
 
-  
- 
+/*Timer*/
+.time {
+  height: 100vh;
+  margin: 0; 
+  background: black;
+  color: white; 
+  font-family: sans-serif;
+  display: flex; 
+  align-items: top-left;
+  justify-content: top-left; 
+}
+#timer {
+  font-size: 12px;
+  background: black;
+  padding: 20px 80px;
+  border-radius: 10px;
+}
 
   
   
