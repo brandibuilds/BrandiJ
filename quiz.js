@@ -6,7 +6,7 @@ const correctAnswers = {
 };
 
 const quizForm = document.getElementById("quizForm");
-const resultDisplay = document.getElementById("result");
+const resultDisplay = document.getElementById("results");
 
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();
