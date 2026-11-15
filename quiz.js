@@ -54,9 +54,10 @@ quizForm.addEventListener("submit", function(event) {
   questionResults += 
     "<p><strong>" + question + "</strong></p>" +
     "<p>Your Answer: " + userAnswer + "</p>" +
-    "<p>Correct Answer: " + (Array.isArray(correctAnswer)
-                         ? correctAnswer.join(",")
-                         : correctAnswer) + "</p>" +
+    "<p>Correct Answer: " + 
+    (Array.isArray(correctAnswer))
+        ? correctAnswer.join(",")
+        : correctAnswer) + "</p>" +
     "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p><hr>";
   }
   
