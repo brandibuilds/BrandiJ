@@ -24,7 +24,7 @@ quizForm.addEventListener("submit", function(event) {
 }
 
   const percentage = Math.round((score / 3) * 100);
-  resultDisplay.innerText= 'Score: ' + score
+  resultDisplay.innerText= `Score: ${score}/(${percentage}%)`;
 }); 
       
 
