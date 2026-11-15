@@ -58,7 +58,7 @@ quizForm.addEventListener("submit", function(event) {
                          ? correctAnswer.join(",")
                          : correctAnswer}</p>
     <p>${isCorrect ? "Correct!" : "Incorrect"}</p><hr>;`
-}
+  }
   
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
