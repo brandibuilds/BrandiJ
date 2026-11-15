@@ -2,7 +2,14 @@
 const correctAnswers = {
   question1: "web server",
   question2: "event driven",
-  question3: "1990"
+  question3: "1990",
+  question4: "Open Source Software",
+  question5: "Tim Berners-Lee",
+  question6: "Changes a website name into an IP address",
+  question7: "w3c",
+  question8: "processing",
+  question9: "url",
+  question10: ["proprietary","1995","security"]
 };
 
 const quizForm = document.getElementById("quizForm");
@@ -22,7 +29,7 @@ quizForm.addEventListener("submit", function(event) {
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
 }
-  const percentage = Math.round((score / 3) * 100);
+  const percentage = Math.round((score / 10) * 100);
   resultDisplay.innerText= `Score: ${score}/(${percentage}%)`;
 }); 
       
