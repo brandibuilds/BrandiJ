@@ -51,7 +51,7 @@ quizForm.addEventListener("submit", function(event) {
 }
   if (isCorrect) {score++;}
   }
-  questionResults +=
+  questionResults += `
     <p><strong>${question}</strong></p>
     <p>Your Answer: ${userAnswer}</p>
     <p>Correct Answer: ${Array.isArray(correctAnswers)
