@@ -5,8 +5,8 @@ const correctAnswers = {
   question3: "1990"
 };
 
-const form = document.getElementById("quizForm");
-const form = document.getElementById("result");
+const quizForm = document.getElementById("quizForm");
+const resultDisplay = document.getElementById("result");
 
 quiz.addEventListener("submit", function(event) {
   event.preventDefault();
