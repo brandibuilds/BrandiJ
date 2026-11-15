@@ -10,7 +10,7 @@ const resultDisplay = document.getElementById("result");
 
 quiz.addEventListener("submit", function(event) {
   event.preventDefault();
-  alert("ugh")
+  alert("ugh");
 });
 
 
@@ -21,7 +21,7 @@ quiz.addEventListener("submit", function(event) {
     //const selectedOption = document.querySelector('input[name="${question}"]:checked');
 
     //if (selectedOption && selectedOption.value === correctAnswers[question]) {score++};
-  }
+  //}
 
   //const percentage = Math.round((score / 3) * 100);
   //resultDisplay.innerText= 'Score: ' + score
