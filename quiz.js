@@ -70,7 +70,7 @@ quizForm.addEventListener("submit", function(event) {
   document.getElementById("pass/fail").innerHTML = finalresults;
   resultDisplay.innerText= `Score: ${score}/${totalQuestions}(${percentage}%)`;
 }); 
-      
+    
 let seconds = 600;
 function updateTimer(){
   const timer= document.getElementById('timer');
