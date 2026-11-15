@@ -8,7 +8,7 @@ const correctAnswers = {
 const form = document.getElementById("quizForm");
 const form = document.getElementById("result");
 
-quizForm.addEventListener("submit", function(event) {
+quiz.addEventListener("submit", function(event) {
   event.preventDefault();
 
   let score = 0;
