@@ -29,15 +29,37 @@ quizForm.addEventListener("submit", function(event) {
 
   const formData = new FormData(quizForm);
   let score = 0;
+  let questionResults = " ";
+  
   const totalQuestions= Object.keys(correctAnswers).length;
+  
 //loops through the question and answers//
   for(let question in correctAnswers) {
     const textInput = document.querySelector(`input[name="${question}"][type="text"]`);
     const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+    const selectedCheckboxes = Array.from(document.querySelectorAll(`input[name="${question}"][type="checkbox"]:checked`)).map(input => input.value);
+
+    let userAnswer = "No Answer";
+    let isCorrect = false;
 //compares the users selections against the correctanswers adds a point if they match//
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
+     else if (Array.isArray(correctAnswers)) { userAnswer = selectedCheckboxes.join(",") || "No Answer";
+                                              isCorrect=
+                                                selectedCheckboxes.length == correctAnswers.length &&
+                                                correctAnswers.every(answer => selectedCheckboxes.includes(answer));
 }
+  if (isCorrect) {score++;}
+  }
+  questionResults +=
+    <p><strong>${question}</strong></p>
+    <p>Your Answer: ${userAnswer}</p>
+    <p>Correct Answer: ${Array.isArray(correctAnswers)
+                         ? correctAnswers.join(",")
+                         : correctAnswers}</p>
+    <p>${isCorrect ? "Correct!" : "Incorrect"}</p><hr>;
+}
+  
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
     if (percentage >= 60) {
