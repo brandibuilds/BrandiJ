@@ -16,9 +16,15 @@ quizForm.addEventListener("submit", function(event) {
   const totalQuestions= Object.keys(correctAnswers).length;
 
   for(let question in correctAnswers) {
+    const userAnswer = formData.get(question);
     const textInput = document.querySelector(`input[name="${question}"][type="text"]`);
     const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
 
+    if (userAnswer) {
+      const cleanedAnswer = userAnswer.trim().toLowerCase();
+
+      if (correctAnswer[question].includes(cleanedAnswer)) {score++;}
+    }
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
     } else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
 }
