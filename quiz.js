@@ -1,14 +1,30 @@
 //DOM//
-//timer//
-const question = document.getElementById("question");
-const answerButtons=document.getElementById("answer-buttons");
-const nextButton=document.getElementById("next-button");
+const correctAnswers = {
+  question1: "web server",
+  question2: "event driven",
+  question3: "1990"
+};
 
-//Questions//
-const questions = [
+const form = document.getElementById("quizForm");
+const form = document.getElementById("result");
 
-{ 
-  question; 'The first web server and browser became avaliable in what year?',
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  let score = 0;
+  const totalQuestions= Object.keys(correctAnswers).length;
+
+  for(let question in correctAnswers) {
+    const selectedOption = document.querySelector('input[name="${question}"]:checked');
+
+    if (selectedOption && selectedOption.value === correctAnswers[question]) {score++};
+  }
+
+  const percentage = Math.round((score / 3) * 100);
+  resultDisplay.innerText= 'Score: ' + score
+});
+  
+      
 
   
 
