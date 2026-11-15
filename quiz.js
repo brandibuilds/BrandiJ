@@ -30,14 +30,13 @@ quizForm.addEventListener("submit", function(event) {
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
 }
   const percentage = Math.round((score / 10) * 100);
-  const percentage = finalresults;
   let finalresults;
-    if (percentage > 60) {
+    if (percentage >= 60) {
       finalresults = "Pass";
     } else {
       finalresults = "Fail";
     }
-  document.getElementById("pass/fail").innerHTML = finalreults;
+  document.getElementById("pass/fail").innerHTML = finalresults;
   resultDisplay.innerText= `Score: ${score}/${totalQuestions}(${percentage}%)`;
 }); 
       
