@@ -18,6 +18,15 @@ const resultDisplay = document.getElementById("results");
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();//stops the page from regreshing//
 
+  clearInterval(countdown);
+
+  let timeUsed = 600 - seconds;
+
+  let minutesSpent = Math.floor(timeUsed / 60);
+  let secondsSpent = timeUsed % 60;
+
+  document.getElementById("timeSpent").innerText = "Time Spent: " + minutesSpent + "minutes" + secondsSpent + "seconds";
+
   const formData = new FormData(quizForm);
   let score = 0;
   const totalQuestions= Object.keys(correctAnswers).length;
