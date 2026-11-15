@@ -54,10 +54,10 @@ quizForm.addEventListener("submit", function(event) {
   questionResults += `
     <p><strong>${question}</strong></p>
     <p>Your Answer: ${userAnswer}</p>
-    <p>Correct Answer: ${Array.isArray(correctAnswers)
+    <p>Correct Answer: ${Array.isArray(correctAnswer)
                          ? correctAnswers.join(",")
                          : correctAnswers}</p>
-    <p>${isCorrect ? "Correct!" : "Incorrect"}</p><hr>;
+    <p>${isCorrect ? "Correct!" : "Incorrect"}</p><hr>;`
 }
   
   const percentage = Math.round((score / 10) * 100); //score//
@@ -68,7 +68,9 @@ quizForm.addEventListener("submit", function(event) {
       finalresults = "Fail";
     }
   document.getElementById("pass/fail").innerHTML = finalresults;
-  resultDisplay.innerText= `Score: ${score}/${totalQuestions}(${percentage}%)`;
+  resultDisplay.innerText= "Score:" + score + "/" + totalQuestions + " (" + percentage + "%)";
+  document.getElementById("questionResults").innerHTML = questionResults;
+
 }); 
     
 let seconds = 600;
