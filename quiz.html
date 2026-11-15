@@ -4,11 +4,7 @@
     <title>Quiz</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <!-- Title -->
-    <div class="header">
-      <h1> Web Server Quiz</h1>
-    </div>  
+    <link rel="stylesheet" href="style.css"> 
     <!-- Navagation Bar -->
   <div class="navbar">
     <p><a href="index.html">Home</a></p>  
@@ -21,39 +17,26 @@
     <p><a href="quiz.html">Quiz</a></p>
   </div> 
   </head>
-<body>
-  <main class="quiz-section">
-    <div class="quiz-container">
-      <!--Timer -->
-      <div class="quiz-timer">
-      </div>
-      <div class="quiz-page">
-        <div class="body">
-          <div class="button">
-      <!-- Quiz Header -->
-      <div class="quiz-header">
-        <div class="quiz-title-container">
-          <h1 class="quiz-title">Web Server Quiz</h1>
-      <!-- Questions-->
-      <div class="question-container">
-        <h2 class="question" id="question">The first web server and browser became available in what year?</h2>
-      </div>
-      <!-- Answers -->
-       <div class="answer-buttons-container" id="answer-button">
-         <button class="answer-button" input type="radio">1860</button>
-         <button class="answer-button" input type="radio">1990</button>
-         <button class="answer-button" input type="radio">2000</button>
-         <button class="answer-button" input type="radio">1999</button>       
-       </div>
-      <!-- Quiz Controls -->
-      <div class="quiz-controls">
-        <button class="submit-button" id="submit-button" type="button"> Submit Quiz </button>
-      </div>
-          </div>
-            </div>
-    </div>
-    </div>
-  </main>
-  <script src="quiz.js"></script>
+<form id="quizForm">
+  <!--Title-->
+  <div class="header">
+      <h1> Web Server Quiz</h1>
+  </div> 
+<body> 
+  <!--Question1 -->
+  <p>Responds to a web browser with the webpages requested.</p><br>
+  <input type="text" name="question1" required><br>
+  <p>Web server architecture that handles all requests in one process/fewer processes than a process-based server.</p><br>
+  <input type="text" name="question2" required><br>
+  <p>The first web server and web browser became avaliable in what year?</p><br>
+  <label><input type="radio" name="question3" value="1860" required> 1860 </label><br>
+  <label><input type="radio" name="question3" value="1990" required> 1990 </label><br>
+  <label><input type="radio" name="question3" value="2000" required> 2000 </label><br>
+  <label><input type="radio" name="question3" value="1999" required> 1999 </label><br> 
+
+  
+  <button id="submit" class="submit">Submit Quiz</button>
+<script src="quiz.js"></script>
+</form> 
 </body>
 </html>
