@@ -10,20 +10,22 @@ const resultDisplay = document.getElementById("result");
 
 quiz.addEventListener("submit", function(event) {
   event.preventDefault();
+  alert("ugh")
+});
 
-  let score = 0;
-  const totalQuestions= Object.keys(correctAnswers).length;
 
-  for(let question in correctAnswers) {
-    const selectedOption = document.querySelector('input[name="${question}"]:checked');
+  //let score = 0;
+  //const totalQuestions= Object.keys(correctAnswers).length;
 
-    if (selectedOption && selectedOption.value === correctAnswers[question]) {score++};
+  //for(let question in correctAnswers) {
+    //const selectedOption = document.querySelector('input[name="${question}"]:checked');
+
+    //if (selectedOption && selectedOption.value === correctAnswers[question]) {score++};
   }
 
-  const percentage = Math.round((score / 3) * 100);
-  resultDisplay.innerText= 'Score: ' + score
-});
-  
+  //const percentage = Math.round((score / 3) * 100);
+  //resultDisplay.innerText= 'Score: ' + score
+//}); 
       
 
   
