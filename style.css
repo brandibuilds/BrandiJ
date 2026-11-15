@@ -100,11 +100,11 @@
   color: white; 
   font-family: sans-serif;
   display: flex; 
-  align-items: top-left;
-  justify-content: top-left; 
+  align-items: center;
+  justify-content: center; 
 }
 #timer {
-  font-size: 12px;
+  font-size: 20px;
   background: black;
   padding: 20px 80px;
   border-radius: 10px;
