@@ -44,8 +44,8 @@ let seconds = 600;
 function updateTimer(){
   const timer= document.getElementById('timer');
   
-  let mins= Math.floor(seconds / 60)
-  let secs= Math.floor(seconds % 60);
+  let mins= Math.floor(seconds / 60);
+  let secs= seconds % 60;
   
   timer.textContent=
     String(mins).padStart(2,"0") + ":"+
