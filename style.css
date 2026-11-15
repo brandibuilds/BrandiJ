@@ -95,7 +95,7 @@
 /*Timer*/
 .timer {
   height: 100vh;
-  margin-top: 1rem; 
+  margin-top: .8rem; 
   background: black;
   color: white; 
   font-family: sans-serif;
