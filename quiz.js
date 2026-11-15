@@ -46,7 +46,12 @@ function updateTimer(){
   const mins= String(Math.floor(seconds / 60)).padStart(2,'0');
   const secs= String(Math.floor(seconds % 60).padStart(2,'0');
   timer.textContent=`${mins} : ${secs}`;
-  if(seconds > 0)seconds-;
+  if(seconds > 0) {
+    seconds--;
+  } else {
+    clearInterval(countdown);
+    alert("Time's Up!");
+  }
 }
 updateTimer();
 const countdown = setInterval(updateTimer, 1000);
