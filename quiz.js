@@ -54,7 +54,6 @@ quizForm.addEventListener("submit", function(event) {
     "<p>Your Answer: " + userAnswer + "</p>" +
     "<p>Correct Answer: " + answerText + "</p> +
     "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";
-    (Array.isArray(correctAnswers) ? 
   
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
