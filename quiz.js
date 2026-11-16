@@ -19,9 +19,12 @@ quizForm.addEventListener("submit", function(event) {
   event.preventDefault();//stops the page from regreshing//
 
   let seconds = 600;
+  let countdown;
   const timer= document.getElementById('timer');
   const quizForm = document.getElementById("quizForm");
 
+  timer.textContent = "10:00";
+  
   function updateTimer() {
       let mins= Math.floor(seconds / 60);
       let secs= seconds % 60; 
