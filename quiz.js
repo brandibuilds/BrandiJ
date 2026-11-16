@@ -18,29 +18,9 @@ const resultDisplay = document.getElementById("results");
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();//stops the page from regreshing//
 
-  let timeUsed = 600 - seconds;
-
-  let minutesSpent = Math.floor(timeUsed / 60);
-  let secondsSpent = timeUsed % 60;
-
-  document.getElementById("timeSpent").innerText = "Time Spent: " + minutesSpent + "minutes" + secondsSpent + "seconds";
-  clearInterval(countdown);
-
-  let aseconds = 600;
-  function updateTimer(){
+  let seconds = 600;
   const timer= document.getElementById('timer');
-  }
-  const countdown = setInterval(updateTimer, 1000);
-
-  
-  quizForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    clearInterval(countdown);
-});
-
-  let seconds=600;
-  let timer = document.getElementById("timer");
-  let countdown;
+  const quizForm = document.getElementById("quizForm");
 
   function updateTimer() {
       let mins= Math.floor(seconds / 60);
@@ -58,7 +38,19 @@ quizForm.addEventListener("submit", function(event) {
     }
   }
   updateTimer();
-  document.getElementById("timer").textContent = "10:00";
+  const countdown = setInterval(updateTimer, 1000);
+//stop timer - show user time//
+  quizForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    clearInterval(countdown);
+
+    let timeUsed = 600 - seconds
+    let minutesSpent = Math.floor(timeUsed / 60);
+    let secondsSpent = timeUsed % 60;
+
+    document.getElementById("timeSpent").innerText = 
+      "Time Spent: " + minutesSpent + "minutes" + secondsSpent + "seconds";
+  });
 
   
   const formData = new FormData(quizForm);
