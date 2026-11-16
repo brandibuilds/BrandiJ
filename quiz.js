@@ -41,11 +41,11 @@ quizForm.addEventListener("submit", function(event) {
 
     let userAnswer = "No Answer";
     let isCorrect = false;
-    let answerText = correctAnswers;
+    let answerText = correctAnswers[question];
 //compares the users selections against the correctanswers adds a point if they match//
-    if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
+    if (selectedOption && selectedOption.value === correctAnswers[question]) {isCorrect = true; userAnswer = selectedOption.value;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
-     else if (Array.isArray(correctAnswers)) {answerText = correctAnswers.join(",");}
+     else if (Array.isArray(correctAnswers[question])) {answerText = correctAnswers.join(",");}
   }
   if (isCorrect) {score++;}
 
@@ -53,7 +53,7 @@ quizForm.addEventListener("submit", function(event) {
     "<p><strong>" + question + "</strong></p>" +
     "<p>Your Answer: " + userAnswer + "</p>" +
     "<p>Correct Answer: " + answerText + "</p> +
-    "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";
+    "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";}
   
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
