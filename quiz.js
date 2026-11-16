@@ -45,7 +45,8 @@ function updateTimer(){
   }
 }
 updateTimer();
-const countdown = setInterval(updateTimer, 1000);
+document.getElementById("timer").textContent = "10:00";
+  const countdown = setInterval(updateTimer, 1000);
 
   const formData = new FormData(quizForm);
   let score = 0;
