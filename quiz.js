@@ -35,25 +35,41 @@ quizForm.addEventListener("submit", function(event) {
   
 //loops through the question and answers//
   for(let question in correctAnswers) {
-    const textInput = document.querySelector(`input[name="${question}"][type="text"]`);
-    const selectedOption = document.querySelector(`input[name="${question}"]:checked`);
-    const selectedCheckboxes = Array.from(document.querySelectorAll(`input[name="${question}"][type="checkbox"]:checked`)).map(input => input.value);
+    
+    const correctAnswer = correctAnswers[question];
+      
+    const textInput = quizForm.querySelector(`input[name="${question}"][type="text"]`);
+    const selectedOption = quizForm.querySelector(`input[name="${question}"]:checked[type="radio"]`);
+    const selectedCheckboxes = Array.from(quizForm.querySelectorAll(`input[name="${question}"]:checked[type="checkbox"]`)).map(checkbox => checkbox.value);
 
     let userAnswer = "No Answer";
     let isCorrect = false;
-    let answerText = correctAnswers[question];
+    
 //compares the users selections against the correctanswers adds a point if they match//
-    if (selectedOption && selectedOption.value === correctAnswers[question]) {isCorrect = true; userAnswer = selectedOption.value;}
-     else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
-     else if (Array.isArray(correctAnswers[question])) {answerText = correctAnswers.join(",");}
-  }
+    if (Array.isArray(correctAnswer)) { if (selectedCheckboxes.length > 0) { userAnswer = selectedCheckboxes.join(",");}
+        isCorrect = selectedCheckboxes.length===correctAnswer.length && correctAnswer.every(answer => selectedCheckboxes.includes(answer));
+                                      } else if (selectedOption) { userAnswer = selectedOption.value;
+                                                                  isCorrect = 
+                                                                    userAnswer.toLowerCase()===
+                                                                    correctAnswer.toLowerCase();
+                                      } else if (textInput) { userAnswer = textInput.value.trim() || "No Answer";
+                                                             isCorrect =
+                                                               userAnswer.toLowerCase()===
+                                                               correctAnswer.toLowerCase();
+                                                            }
+ //add a point for the correctr answers//    
   if (isCorrect) {score++;}
-
+//shows question and answer//
+  let answerText = Array.isArray(correctAnswer)
+    ? correctAnswer.join(",")
+    : correctAnswer;
+    
   questionResults += 
     "<p><strong>" + question + "</strong></p>" +
     "<p>Your Answer: " + userAnswer + "</p>" +
     "<p>Correct Answer: " + answerText + "</p> +
-    "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";}
+    "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";
+  }
   
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
