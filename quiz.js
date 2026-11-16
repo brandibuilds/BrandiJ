@@ -26,19 +26,19 @@ quizForm.addEventListener("submit", function(event) {
   document.getElementById("timeSpent").innerText = "Time Spent: " + minutesSpent + "minutes" + secondsSpent + "seconds";
   clearInterval(countdown);
 
-  let seconds = 600;
+  let aseconds = 600;
   function updateTimer(){
   const timer= document.getElementById('timer');
   }
   const countdown = setInterval(updateTimer, 1000);
 
   
-quizForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  clearInterval(countdown);
+  quizForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    clearInterval(countdown);
 });
 
-  let seconds=600
+  let seconds=600;
   let timer = document.getElementById("timer");
   let countdown;
 
