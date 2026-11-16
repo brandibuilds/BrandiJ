@@ -18,14 +18,34 @@ const resultDisplay = document.getElementById("results");
 quizForm.addEventListener("submit", function(event) {
   event.preventDefault();//stops the page from regreshing//
 
-  clearInterval(countdown);
-
   let timeUsed = 600 - seconds;
 
   let minutesSpent = Math.floor(timeUsed / 60);
   let secondsSpent = timeUsed % 60;
 
   document.getElementById("timeSpent").innerText = "Time Spent: " + minutesSpent + "minutes" + secondsSpent + "seconds";
+  clearInterval(countdown);
+
+  let seconds = 600;
+function updateTimer(){
+  const timer= document.getElementById('timer');
+  
+  let mins= Math.floor(seconds / 60);
+  let secs= seconds % 60;
+  
+  timer.textContent=
+    String(mins).padStart(2,"0") + ":"+
+    String(secs).padStart(2,"0");
+  
+  if(seconds > 0) {
+    seconds--;
+  } else {
+    clearInterval(countdown);
+    alert("Time's Up!");
+  }
+}
+updateTimer();
+const countdown = setInterval(updateTimer, 1000);
 
   const formData = new FormData(quizForm);
   let score = 0;
@@ -83,27 +103,7 @@ quizForm.addEventListener("submit", function(event) {
   document.getElementById("questionResults").innerHTML = questionResults;
 
 }); 
-    
-let seconds = 600;
-function updateTimer(){
-  const timer= document.getElementById('timer');
-  
-  let mins= Math.floor(seconds / 60);
-  let secs= seconds % 60;
-  
-  timer.textContent=
-    String(mins).padStart(2,"0") + ":"+
-    String(secs).padStart(2,"0");
-  
-  if(seconds > 0) {
-    seconds--;
-  } else {
-    clearInterval(countdown);
-    alert("Time's Up!");
-  }
-}
-updateTimer();
-const countdown = setInterval(updateTimer, 1000);
+
 
 
   
