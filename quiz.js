@@ -41,22 +41,20 @@ quizForm.addEventListener("submit", function(event) {
 
     let userAnswer = "No Answer";
     let isCorrect = false;
+    let answerText = correctAnswers;
 //compares the users selections against the correctanswers adds a point if they match//
     if (selectedOption && selectedOption.value === correctAnswers[question]) {score++;}
      else if (textInput && textInput.value.trim().toLowerCase() === correctAnswers[question]) {score++;}
-     else if (Array.isArray(correctAnswers)) { userAnswer = selectedCheckboxes.join(",") || "No Answer";
-                                              isCorrect=
-                                                selectedCheckboxes.length == correctAnswers.length &&
-                                                correctAnswers.every(answer => selectedCheckboxes.includes(answer));
-}
+     else if (Array.isArray(correctAnswers)) {answerText = correctAnswers.join(",");}
+  }
   if (isCorrect) {score++;}
   }
   questionResults += 
     "<p><strong>" + question + "</strong></p>" +
     "<p>Your Answer: " + userAnswer + "</p>" +
-    "<p>Correct Answer: " + 
-    (Array.isArray(correctAnswers) ? correctAnswer.join(",") : correctAnswer) + "</p>" + "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p><hr>";
-}
+    "<p>Correct Answer: " + answerText + "</p> +
+    "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";
+    (Array.isArray(correctAnswers) ? 
   
   const percentage = Math.round((score / 10) * 100); //score//
   let finalresults;
