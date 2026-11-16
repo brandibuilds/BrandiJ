@@ -37,8 +37,14 @@ quizForm.addEventListener("submit", function(event) {
   event.preventDefault();
   clearInterval(countdown);
 });
-  let mins= Math.floor(seconds / 60);
-  let secs= seconds % 60;
+
+  let seconds=600
+  let timer = document.getElementById("timer");
+  let countdown;
+
+  function updateTimer() {
+      let mins= Math.floor(seconds / 60);
+      let secs= seconds % 60; 
   
   timer.textContent=
     String(mins).padStart(2,"0") + ":"+
@@ -49,8 +55,8 @@ quizForm.addEventListener("submit", function(event) {
   } else {
     clearInterval(countdown);
     alert("Time's Up!");
+    }
   }
-  
   updateTimer();
   document.getElementById("timer").textContent = "10:00";
 
