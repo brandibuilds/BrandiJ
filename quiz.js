@@ -92,7 +92,7 @@ quizForm.addEventListener("submit", function(event) {
   questionResults += 
     "<p><strong>" + question + "</strong></p>" +
     "<p>Your Answer: " + userAnswer + "</p>" +
-    "<p>Correct Answer: " + answerText + "</p> +
+    "<p>Correct Answer: " + answerText + "</p>" +
     "<p>" + (isCorrect ? "Correct" : "Incorrect") + "</p>";
   }
   
