@@ -27,9 +27,16 @@ quizForm.addEventListener("submit", function(event) {
   clearInterval(countdown);
 
   let seconds = 600;
-function updateTimer(){
+  function updateTimer(){
   const timer= document.getElementById('timer');
+  }
+  const countdown = setInterval(updateTimer, 1000);
+
   
+quizForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  clearInterval(countdown);
+});
   let mins= Math.floor(seconds / 60);
   let secs= seconds % 60;
   
@@ -46,11 +53,7 @@ function updateTimer(){
 }
 updateTimer();
 document.getElementById("timer").textContent = "10:00";
-  const countdown = setInterval(updateTimer, 1000);
 
-quizForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  clearInterval(countdown);
   
   const formData = new FormData(quizForm);
   let score = 0;
