@@ -48,6 +48,10 @@ updateTimer();
 document.getElementById("timer").textContent = "10:00";
   const countdown = setInterval(updateTimer, 1000);
 
+quizForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  clearInterval(countdown);
+  
   const formData = new FormData(quizForm);
   let score = 0;
   let questionResults = " ";
@@ -102,7 +106,6 @@ document.getElementById("timer").textContent = "10:00";
   document.getElementById("pass/fail").innerHTML = finalresults;
   resultDisplay.innerText= "Score:" + score + "/" + totalQuestions + " (" + percentage + "%)";
   document.getElementById("questionResults").innerHTML = questionResults;
-
 }); 
 
 
