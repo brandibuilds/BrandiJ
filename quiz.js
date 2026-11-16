@@ -50,9 +50,9 @@ quizForm.addEventListener("submit", function(event) {
     clearInterval(countdown);
     alert("Time's Up!");
   }
-}
-updateTimer();
-document.getElementById("timer").textContent = "10:00";
+  
+  updateTimer();
+  document.getElementById("timer").textContent = "10:00";
 
   
   const formData = new FormData(quizForm);
